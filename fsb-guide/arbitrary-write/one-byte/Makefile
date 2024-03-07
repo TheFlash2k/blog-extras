@@ -1,4 +1,4 @@
-FILE := fsb-write-two-bytes
+FILE := fsb-write-one-byte
 FLAGS := -w -no-pie
 
 all:

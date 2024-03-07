@@ -15,7 +15,7 @@ int main() {
 	
 	printf(buffer);
 
-	if(secret == 0x1337) {
+	if(secret == 0x37) {
 		printf("Well done!\n");
 		return 0;
 	}
