@@ -1,9 +1,9 @@
-// gcc -o fsb-write-four-bytes fsb-write-four-bytes.c -w -no-pie
+// gcc -o fsb-write-eight-bytes fsb-write-eight-bytes.c -w -no-pie
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int secret = 0;
+long secret = 0;
 
 int main() {
 
@@ -15,10 +15,10 @@ int main() {
 	
 	printf(buffer);
 
-	if(secret == 0xdeadbeef) {
+	if(secret == 0xdeadbeefdeadbeef) {
 		printf("\n[*] Well done!\n");
 		return 0;
 	}
-	printf("Nope! You wrote %x\n", secret);
+	printf("Nope! You wrote %llx\n", secret);
 	return 1;
 }
